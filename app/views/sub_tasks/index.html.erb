@@ -1,0 +1,21 @@
+<h3>
+  <span class="<%= @task.due_date_class %>">
+    <%= @task.due_date&.strftime('%-m/%-d/%y') %>
+  </span>
+</h3>
+
+<h3>
+  <% if @task.completed? %>
+    <s><%= @task.description %></s>
+  <% else %>
+    <%= @task.description %>
+  <% end %>
+</h3>
+
+<%= render 'tasks/buttons', task: @task %>
+
+<%= render 'table', task: @task %>
+
+<hr>
+
+<%= render 'form', task: @task, sub_task: @sub_task %>

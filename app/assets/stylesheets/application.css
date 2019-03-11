@@ -1,0 +1,11 @@
+a:hover{
+  text-decoration: none;
+}
+
+.badge-lg{
+  font-size: large;
+}
+
+.badge-sm{
+  font-size: small;
+}

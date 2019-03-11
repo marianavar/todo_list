@@ -1,0 +1,15 @@
+<h1><%= params[:status]&.titleize || "All" %> Tasks</h1>
+
+<%= render 'menu' %>
+
+<%= render 'search' %>
+
+<%= render 'table', tasks: @tasks %>
+
+<%# <%= will_paginate @tasks %> %>
+
+<hr>
+
+<% unless params[:status] == 'completed' %>
+  <%= render 'form', task: @task %>
+<% end %>
